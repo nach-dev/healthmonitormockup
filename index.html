@@ -15,8 +15,8 @@
     <button class="nav" data-page="vitals">Vitals Detail</button>
     <button class="nav" data-page="alerts">Alert Grid</button>
     <div class="filters">
-      <label>Patient</label><select id="patientSelect"></select>
       <label>Doctor</label><select id="doctorSelect"></select>
+      <label>Patient</label><select id="patientSelect"></select>
       <label>Date</label><select id="dateSelect"></select>
     </div>
   </aside>
@@ -25,6 +25,7 @@
       <div><h2>Remote Patient Monitoring</h2><p>Hourly vitals, patient status, and clinical alert tracking</p></div>
       <div class="pill" id="lastUpdated">Live Monitor</div>
     </header>
+
     <section id="overview" class="page active">
       <div class="cards">
         <div class="card status-card" id="glucoseCard"><span>Glucose</span><strong id="glucoseValue">--</strong><small id="glucoseStatus">--</small></div>
@@ -41,6 +42,7 @@
       </div>
       <div class="panel"><h3>Latest Patient Snapshot</h3><div class="table-wrap"><table id="snapshotTable"></table></div></div>
     </section>
+
     <section id="patient" class="page">
       <div class="grid two">
         <div class="panel"><h3>Patient Profile</h3><div id="patientProfile" class="profile"></div></div>
@@ -48,41 +50,47 @@
       </div>
       <div class="panel"><h3>Reading History</h3><div class="table-wrap"><table id="historyTable"></table></div></div>
     </section>
-    
+
     <section id="vitals" class="page">
       <div class="patient-vitals-header">
         <div>
           <h2 id="vitalsPatientTitle">Patient Vitals Detail</h2>
           <p>Click each tracker tab to view the selected patient’s latest readings, ranges, and hourly history.</p>
         </div>
-        <div class="pill">Interactive Tracker Tabs</div>
+        <div class="pill">April 1–14, 2026</div>
       </div>
 
-      <div class="vital-tabs">
-        <button class="vital-tab active" data-vital="bp">Blood Pressure</button>
-        <button class="vital-tab" data-vital="pulse">Pulse</button>
-        <button class="vital-tab" data-vital="bmi">BMI / Weight</button>
-        <button class="vital-tab" data-vital="spo2">SpO2</button>
-        <button class="vital-tab" data-vital="glucose">Glucose</button>
-        <button class="vital-tab" data-vital="temperature">Temperature</button>
-      </div>
+      <div class="vital-detail-shell">
+        <div class="patient-title-strip">
+          <strong id="detailPatientLabel">PATIENT: --</strong>
+          <div class="mini-icons">◯ ▣ 🔔 🗓</div>
+        </div>
+        <div class="vital-tabs">
+          <button class="vital-tab active" data-vital="bp">Blood Pressure</button>
+          <button class="vital-tab" data-vital="pulse">Pulse</button>
+          <button class="vital-tab" data-vital="bmi">Weight</button>
+          <button class="vital-tab" data-vital="spo2">SpO2</button>
+          <button class="vital-tab" data-vital="glucose">Glucose</button>
+          <button class="vital-tab" data-vital="temperature">Temperature</button>
+        </div>
 
-      <div class="grid two">
-        <div class="panel tracker-panel">
-          <h3 id="trackerTitle">Blood Pressure</h3>
-          <div id="trackerSummary" class="tracker-summary"></div>
-          <div id="trackerGaugeArea" class="tracker-gauge-area"></div>
+        <div class="grid two">
+          <div class="panel tracker-panel">
+            <h3 id="trackerTitle">Blood Pressure</h3>
+            <div id="trackerSummary" class="tracker-summary"></div>
+            <div id="trackerGaugeArea" class="tracker-gauge-area"></div>
+          </div>
+
+          <div class="panel glucose-style-panel">
+            <h3 id="trackerChartTitle">Hourly Trend</h3>
+            <canvas id="vitalDetailChart"></canvas>
+          </div>
         </div>
 
         <div class="panel">
-          <h3 id="trackerChartTitle">Hourly Trend</h3>
-          <canvas id="vitalDetailChart"></canvas>
+          <h3 id="trackerHistoryTitle">Daily Reading Grid</h3>
+          <div id="dailyReadingGrid" class="reading-grid"></div>
         </div>
-      </div>
-
-      <div class="panel">
-        <h3 id="trackerHistoryTitle">Daily Reading Grid</h3>
-        <div id="dailyReadingGrid" class="reading-grid"></div>
       </div>
     </section>
 
