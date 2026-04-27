@@ -12,6 +12,7 @@
     <div class="brand"><div class="logo">♥</div><div><h1>Vita Clinic</h1><p>RPM Dashboard</p></div></div>
     <button class="nav active" data-page="overview">Overview</button>
     <button class="nav" data-page="patient">Patient Detail</button>
+    <button class="nav" data-page="vitals">Vitals Detail</button>
     <button class="nav" data-page="alerts">Alert Grid</button>
     <div class="filters">
       <label>Patient</label><select id="patientSelect"></select>
@@ -47,6 +48,44 @@
       </div>
       <div class="panel"><h3>Reading History</h3><div class="table-wrap"><table id="historyTable"></table></div></div>
     </section>
+    
+    <section id="vitals" class="page">
+      <div class="patient-vitals-header">
+        <div>
+          <h2 id="vitalsPatientTitle">Patient Vitals Detail</h2>
+          <p>Click each tracker tab to view the selected patient’s latest readings, ranges, and hourly history.</p>
+        </div>
+        <div class="pill">Interactive Tracker Tabs</div>
+      </div>
+
+      <div class="vital-tabs">
+        <button class="vital-tab active" data-vital="bp">Blood Pressure</button>
+        <button class="vital-tab" data-vital="pulse">Pulse</button>
+        <button class="vital-tab" data-vital="bmi">BMI / Weight</button>
+        <button class="vital-tab" data-vital="spo2">SpO2</button>
+        <button class="vital-tab" data-vital="glucose">Glucose</button>
+        <button class="vital-tab" data-vital="temperature">Temperature</button>
+      </div>
+
+      <div class="grid two">
+        <div class="panel tracker-panel">
+          <h3 id="trackerTitle">Blood Pressure</h3>
+          <div id="trackerSummary" class="tracker-summary"></div>
+          <div id="trackerGaugeArea" class="tracker-gauge-area"></div>
+        </div>
+
+        <div class="panel">
+          <h3 id="trackerChartTitle">Hourly Trend</h3>
+          <canvas id="vitalDetailChart"></canvas>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3 id="trackerHistoryTitle">Daily Reading Grid</h3>
+        <div id="dailyReadingGrid" class="reading-grid"></div>
+      </div>
+    </section>
+
     <section id="alerts" class="page"><div class="panel"><h3>Hourly Alert Heatmap</h3><div id="heatmap" class="heatmap"></div></div></section>
   </main>
   <script src="data.js"></script><script src="app.js"></script>
