@@ -1,9 +1,10 @@
-# Remote Patient Monitoring Dashboard
+# AveTech Health Dashboard
 
-GitHub Pages-ready dashboard using uploaded PowerBI vitals datasheet.
+GitHub Pages-ready remote patient monitoring dashboard.
 
 Updates included:
-- Patient Detail page fields: Address, Primary Phone #, Next Of Kin Name & Phone #, DOB, Primary Diagnosis, Nearest Health Care Center, Insurance Provider.
-- Doctor filter now refreshes matching patients.
-- Dates moved to April 1–14, 2026.
-- Vitals Detail page with screenshot-style tracker tabs and charts.
+- Branding changed to AveTech Health.
+- Patient Detail page includes separate Next Of Kin Name and Next Of Kin Phone #.
+- Purple border/box removed from Vitals Detail page.
+- Doctor filter refreshes matching patients.
+- Dates are April 1–14, 2026.

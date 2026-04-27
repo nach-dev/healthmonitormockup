@@ -80647,11 +80647,13 @@ const PATIENTS = [
     "Doctor": "D003",
     "Address": "104 Maple Ridge Ave",
     "Primary Phone #": "555-3100-2203",
-    "Next Of Kin Name & Phone #": "Tina Martin",
+    "Next Of Kin Name & Phone #": "Tina Martin - 555-3101",
     "DOB": "1981-04-12",
     "Primary Diagnosis": "Hypertension",
     "Nearest Health Care Center": "C001",
-    "Insurance Provider": "BlueCross"
+    "Insurance Provider": "BlueCross",
+    "Next Of Kin Name": "Tina Martin",
+    "Next Of Kin Phone #": "555-3101"
   },
   {
     "PatientID": "P002",
@@ -80659,11 +80661,13 @@ const PATIENTS = [
     "Doctor": "D001",
     "Address": "220 Oakview Dr",
     "Primary Phone #": "555-3101-2214",
-    "Next Of Kin Name & Phone #": "Marcus Carter",
+    "Next Of Kin Name & Phone #": "Marcus Carter - 555-3102",
     "DOB": "1992-06-17",
     "Primary Diagnosis": "Mild asthma",
     "Nearest Health Care Center": "C002",
-    "Insurance Provider": "Aetna"
+    "Insurance Provider": "Aetna",
+    "Next Of Kin Name": "Marcus Carter",
+    "Next Of Kin Phone #": "555-3102"
   },
   {
     "PatientID": "P003",
@@ -80671,11 +80675,13 @@ const PATIENTS = [
     "Doctor": "D002",
     "Address": "78 Peachtree Ct",
     "Primary Phone #": "555-3102-2225",
-    "Next Of Kin Name & Phone #": "Elena Rivera",
+    "Next Of Kin Name & Phone #": "Elena Rivera - 555-3103",
     "DOB": "1974-08-22",
     "Primary Diagnosis": "Stage 1 hypertension",
     "Nearest Health Care Center": "C003",
-    "Insurance Provider": "United"
+    "Insurance Provider": "United",
+    "Next Of Kin Name": "Elena Rivera",
+    "Next Of Kin Phone #": "555-3103"
   },
   {
     "PatientID": "P004",
@@ -80683,11 +80689,13 @@ const PATIENTS = [
     "Doctor": "D001",
     "Address": "901 Lakewood Ln",
     "Primary Phone #": "555-3103-2236",
-    "Next Of Kin Name & Phone #": "Nia Brooks",
+    "Next Of Kin Name & Phone #": "Nia Brooks - 555-3104",
     "DOB": "1997-10-27",
     "Primary Diagnosis": "Routine monitoring",
     "Nearest Health Care Center": "C001",
-    "Insurance Provider": "Cigna"
+    "Insurance Provider": "Cigna",
+    "Next Of Kin Name": "Nia Brooks",
+    "Next Of Kin Phone #": "555-3104"
   },
   {
     "PatientID": "P005",
@@ -80695,11 +80703,13 @@ const PATIENTS = [
     "Doctor": "D001",
     "Address": "345 Pine Harbor Rd",
     "Primary Phone #": "555-3104-2247",
-    "Next Of Kin Name & Phone #": "Laura Wilson",
+    "Next Of Kin Name & Phone #": "Laura Wilson - 555-3105",
     "DOB": "1959-12-05",
     "Primary Diagnosis": "COPD follow-up",
     "Nearest Health Care Center": "C003",
-    "Insurance Provider": "Humana"
+    "Insurance Provider": "Humana",
+    "Next Of Kin Name": "Laura Wilson",
+    "Next Of Kin Phone #": "555-3105"
   },
   {
     "PatientID": "P006",
@@ -80707,11 +80717,13 @@ const PATIENTS = [
     "Doctor": "D003",
     "Address": "606 Garden Walk",
     "Primary Phone #": "555-3105-2258",
-    "Next Of Kin Name & Phone #": "Omar Johnson",
+    "Next Of Kin Name & Phone #": "Omar Johnson - 555-3106",
     "DOB": "1985-02-10",
     "Primary Diagnosis": "Type 2 diabetes",
     "Nearest Health Care Center": "C002",
-    "Insurance Provider": "BlueCross"
+    "Insurance Provider": "BlueCross",
+    "Next Of Kin Name": "Omar Johnson",
+    "Next Of Kin Phone #": "555-3106"
   },
   {
     "PatientID": "P007",
@@ -80719,11 +80731,13 @@ const PATIENTS = [
     "Doctor": "D002",
     "Address": "12 Brookhaven Way",
     "Primary Phone #": "555-3106-2269",
-    "Next Of Kin Name & Phone #": "Nathan Lee",
+    "Next Of Kin Name & Phone #": "Nathan Lee - 555-3107",
     "DOB": "1968-04-15",
     "Primary Diagnosis": "Arrhythmia monitoring",
     "Nearest Health Care Center": "C001",
-    "Insurance Provider": "Medicare"
+    "Insurance Provider": "Medicare",
+    "Next Of Kin Name": "Nathan Lee",
+    "Next Of Kin Phone #": "555-3107"
   },
   {
     "PatientID": "P008",
@@ -80731,11 +80745,13 @@ const PATIENTS = [
     "Doctor": "D001",
     "Address": "454 Stone Mill St",
     "Primary Phone #": "555-3107-2270",
-    "Next Of Kin Name & Phone #": "Kelly Davis",
+    "Next Of Kin Name & Phone #": "Kelly Davis - 555-3108",
     "DOB": "1988-06-20",
     "Primary Diagnosis": "Post-discharge check",
     "Nearest Health Care Center": "C002",
-    "Insurance Provider": "United"
+    "Insurance Provider": "United",
+    "Next Of Kin Name": "Kelly Davis",
+    "Next Of Kin Phone #": "555-3108"
   },
   {
     "PatientID": "P009",
@@ -80743,11 +80759,13 @@ const PATIENTS = [
     "Doctor": "D002",
     "Address": "808 Riverbend Rd",
     "Primary Phone #": "555-3108-2281",
-    "Next Of Kin Name & Phone #": "Maria Thomas",
+    "Next Of Kin Name & Phone #": "Maria Thomas - 555-3109",
     "DOB": "1953-08-25",
     "Primary Diagnosis": "High fall-risk monitoring",
     "Nearest Health Care Center": "C003",
-    "Insurance Provider": "Medicare"
+    "Insurance Provider": "Medicare",
+    "Next Of Kin Name": "Maria Thomas",
+    "Next Of Kin Phone #": "555-3109"
   },
   {
     "PatientID": "P010",
@@ -80755,10 +80773,12 @@ const PATIENTS = [
     "Doctor": "D003",
     "Address": "31 Magnolia Trace",
     "Primary Phone #": "555-3109-2292",
-    "Next Of Kin Name & Phone #": "Rachel Anderson",
+    "Next Of Kin Name & Phone #": "Rachel Anderson - 555-3110",
     "DOB": "1977-10-03",
     "Primary Diagnosis": "Diabetes + weight monitoring",
     "Nearest Health Care Center": "C001",
-    "Insurance Provider": "Cigna"
+    "Insurance Provider": "Cigna",
+    "Next Of Kin Name": "Rachel Anderson",
+    "Next Of Kin Phone #": "555-3110"
   }
 ];

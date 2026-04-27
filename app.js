@@ -81,7 +81,7 @@ function updateProfile(){
   const fields=[
     ["Patient Name",p],["Patient ID",r.patientId||patientObj.PatientID||"--"],["Doctor",r.doctor||patientObj.Doctor||"--"],
     ["Address",patientObj["Address"]||"--"],["Primary Phone #",patientObj["Primary Phone #"]||"--"],
-    ["Next Of Kin Name & Phone #",patientObj["Next Of Kin Name & Phone #"]||"--"],["DOB",patientObj["DOB"]||"--"],
+    ["Next Of Kin Name",patientObj["Next Of Kin Name"]||"--"],["Next Of Kin Phone #",patientObj["Next Of Kin Phone #"]||"--"],["DOB",patientObj["DOB"]||"--"],
     ["Primary Diagnosis",patientObj["Primary Diagnosis"]||"--"],["Nearest Health Care Center",patientObj["Nearest Health Care Center"]||"--"],
     ["Insurance Provider",patientObj["Insurance Provider"]||"--"],["Latest Reading",r.dateTime||"--"]
   ];
