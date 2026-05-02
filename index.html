@@ -1,101 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AveTech Health Dashboard</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-  <aside class="sidebar">
-    <div class="brand"><div class="logo">♥</div><div><h1>AveTech Health</h1><p>Patient Monitoring Platform</p></div></div>
-    <button class="nav active" data-page="overview">Overview</button>
-    <button class="nav" data-page="patient">Patient Detail</button>
-    <button class="nav" data-page="vitals">Vitals Detail</button>
-    <button class="nav" data-page="alerts">Alert Grid</button>
-    <div class="filters">
-      <label>Doctor</label><select id="doctorSelect"></select>
-      <label>Patient</label><select id="patientSelect"></select>
-      <label>Date</label><select id="dateSelect"></select>
-    </div>
-  </aside>
-  <main>
-    <header class="topbar">
-      <div><h2>AveTech Health</h2><p>Remote patient monitoring, hourly vitals, and clinical alert tracking</p></div>
-      <div class="pill" id="lastUpdated">Live Monitor</div>
-    </header>
-
-    <section id="overview" class="page active">
-      <div class="cards">
-        <div class="card status-card" id="glucoseCard"><span>Glucose</span><strong id="glucoseValue">--</strong><small id="glucoseStatus">--</small></div>
-        <div class="card status-card" id="pulseCard"><span>Pulse</span><strong id="pulseValue">--</strong><small id="pulseStatus">--</small></div>
-        <div class="card status-card" id="bpCard"><span>Blood Pressure</span><strong id="bpValue">--</strong><small id="bpStatus">--</small></div>
-        <div class="card status-card" id="tempCard"><span>Temperature</span><strong id="tempValue">--</strong><small id="tempStatus">--</small></div>
-        <div class="card status-card" id="bmiCard"><span>BMI</span><strong id="bmiValue">--</strong><small id="bmiStatus">--</small></div>
-      </div>
-      <div class="grid two">
-        <div class="panel"><div class="panel-title"><h3>Hourly Vital Trend</h3><select id="vitalTrendSelect">
-          <option value="glucose">Glucose</option><option value="pulse">Pulse</option><option value="temperature">Temperature</option><option value="systolic">BP Systolic</option><option value="diastolic">BP Diastolic</option><option value="bmi">BMI</option><option value="spo2">SpO2</option><option value="respiration">Respiration</option>
-        </select></div><canvas id="trendChart"></canvas></div>
-        <div class="panel"><h3>Status Distribution</h3><canvas id="statusChart"></canvas></div>
-      </div>
-      <div class="panel"><h3>Latest Patient Snapshot</h3><div class="table-wrap"><table id="snapshotTable"></table></div></div>
-    </section>
-
-    <section id="patient" class="page">
-      <div class="grid two">
-        <div class="panel"><h3>Patient Profile</h3><div id="patientProfile" class="profile"></div></div>
-        <div class="panel"><h3>Blood Pressure Trend</h3><canvas id="bpChart"></canvas></div>
-      </div>
-      <div class="panel"><h3>Reading History</h3><div class="table-wrap"><table id="historyTable"></table></div></div>
-    </section>
-
-    <section id="vitals" class="page">
-      <div class="patient-vitals-header">
-        <div>
-          <h2 id="vitalsPatientTitle">Patient Vitals Detail</h2>
-          <p>Click each tracker tab to view the selected patient’s latest readings, ranges, and hourly history.</p>
-        </div>
-        <div class="pill">April 1–14, 2026</div>
-      </div>
-
-      <div class="vital-detail-shell">
-        <div class="patient-title-strip">
-          <strong id="detailPatientLabel">PATIENT: --</strong>
-          <div class="mini-icons">◯ ▣ 🔔 🗓</div>
-        </div>
-        <div class="vital-tabs">
-          <button class="vital-tab active" data-vital="bp">Blood Pressure</button>
-          <button class="vital-tab" data-vital="pulse">Pulse</button>
-          <button class="vital-tab" data-vital="bmi">Weight</button>
-          <button class="vital-tab" data-vital="spo2">SpO2</button>
-          <button class="vital-tab" data-vital="glucose">Glucose</button>
-          <button class="vital-tab" data-vital="temperature">Temperature</button>
-        </div>
-
-        <div class="grid two">
-          <div class="panel tracker-panel">
-            <h3 id="trackerTitle">Blood Pressure</h3>
-            <div id="trackerSummary" class="tracker-summary"></div>
-            <div id="trackerGaugeArea" class="tracker-gauge-area"></div>
-          </div>
-
-          <div class="panel glucose-style-panel">
-            <h3 id="trackerChartTitle">Hourly Trend</h3>
-            <canvas id="vitalDetailChart"></canvas>
-          </div>
-        </div>
-
-        <div class="panel">
-          <h3 id="trackerHistoryTitle">Daily Reading Grid</h3>
-          <div id="dailyReadingGrid" class="reading-grid"></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="alerts" class="page"><div class="panel"><h3>Hourly Alert Heatmap</h3><div id="heatmap" class="heatmap"></div></div></section>
-  </main>
-  <script src="data.js"></script><script src="app.js"></script>
-</body>
-</html>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AveTech Health Dashboard</title><link rel="stylesheet" href="styles.css"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script></head>
+<body><aside class="sidebar"><div class="brand"><div class="logo">♥</div><div><h1>AveTech Health</h1><p>Patient Monitoring Platform</p></div></div>
+<button class="nav active" data-page="overview">Overview</button><button class="nav" data-page="patient">Patient Detail</button><button class="nav" data-page="vitals">Vitals Detail</button><button class="nav" data-page="alerts">Alert Grid</button>
+<div class="filters"><label>Doctor</label><select id="doctorSelect"></select><label>Patient</label><select id="patientSelect"></select><label>Date</label><select id="dateSelect"></select><label>Blood Pressure Level</label><select id="bpLevelSelect"></select><label>Glucose Level</label><select id="glucoseLevelSelect"></select></div></aside>
+<main><header class="topbar"><div><h2>AveTech Health</h2><p>Remote patient monitoring, hourly vitals, and threshold alerts</p></div><div class="pill" id="lastUpdated">Live Monitor</div></header>
+<section id="overview" class="page active"><div class="cards"><div class="card status-card" id="glucoseCard"><span>Glucose</span><strong id="glucoseValue">--</strong><small id="glucoseStatus">--</small></div><div class="card status-card" id="pulseCard"><span>Pulse</span><strong id="pulseValue">--</strong><small id="pulseStatus">--</small></div><div class="card status-card" id="bpCard"><span>Blood Pressure</span><strong id="bpValue">--</strong><small id="bpStatus">--</small></div><div class="card status-card" id="tempCard"><span>Temperature</span><strong id="tempValue">--</strong><small id="tempStatus">--</small></div><div class="card status-card" id="bmiCard"><span>BMI</span><strong id="bmiValue">--</strong><small id="bmiStatus">--</small></div></div>
+<div class="alert-panel"><div class="alert-panel-header"><div><h3>Threshold Alerts</h3><p>High-risk readings for the selected patient/date/filter context.</p></div><span class="alert-count" id="alertCount">0 Alerts</span></div><div id="thresholdAlerts" class="threshold-alerts"></div></div>
+<div class="grid two"><div class="panel"><div class="panel-title"><h3>Hourly Vital Trend</h3><select id="vitalTrendSelect"><option value="glucose">Glucose</option><option value="pulse">Pulse</option><option value="temperature">Temperature</option><option value="systolic">BP Systolic</option><option value="diastolic">BP Diastolic</option><option value="bmi">BMI</option><option value="spo2">SpO2</option><option value="respiration">Respiration</option></select></div><canvas id="trendChart"></canvas></div><div class="panel"><h3>Status Distribution</h3><canvas id="statusChart"></canvas></div></div>
+<div class="panel"><h3>Latest Patient Snapshot</h3><div class="table-wrap"><table id="snapshotTable"></table></div></div></section>
+<section id="patient" class="page"><div class="grid two"><div class="panel"><h3>Patient Profile</h3><div id="patientProfile" class="profile"></div></div><div class="panel"><h3>Blood Pressure Trend</h3><canvas id="bpChart"></canvas></div></div><div class="panel"><h3>Reading History</h3><div class="table-wrap"><table id="historyTable"></table></div></div></section>
+<section id="vitals" class="page"><div class="patient-vitals-header"><div><h2 id="vitalsPatientTitle">Patient Vitals Detail</h2><p>Click tracker tabs to view selected patient readings.</p></div><div class="pill">April 1–14, 2026</div></div><div class="patient-title-strip"><strong id="detailPatientLabel">PATIENT: --</strong><div class="mini-icons">◯ ▣ 🔔 🗓</div></div><div class="vital-tabs"><button class="vital-tab active" data-vital="bp">Blood Pressure</button><button class="vital-tab" data-vital="pulse">Pulse</button><button class="vital-tab" data-vital="bmi">Weight</button><button class="vital-tab" data-vital="spo2">SpO2</button><button class="vital-tab" data-vital="glucose">Glucose</button><button class="vital-tab" data-vital="temperature">Temperature</button></div><div class="grid two"><div class="panel tracker-panel"><h3 id="trackerTitle">Blood Pressure</h3><div id="trackerSummary" class="tracker-summary"></div><div id="trackerGaugeArea" class="tracker-gauge-area"></div></div><div class="panel glucose-style-panel"><h3 id="trackerChartTitle">Hourly Trend</h3><canvas id="vitalDetailChart"></canvas></div></div><div class="panel"><h3>Daily Reading Grid</h3><div id="dailyReadingGrid" class="reading-grid"></div></div></section>
+<section id="alerts" class="page"><div class="panel"><h3>Hourly Alert Heatmap</h3><div id="heatmap" class="heatmap"></div></div></section></main><script src="data.js"></script><script src="app.js"></script></body></html>
