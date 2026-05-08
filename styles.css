@@ -23,3 +23,19 @@
   border-radius:0 !important;
 }
 
+
+
+.brand{
+  justify-content:center;
+  align-items:center;
+  margin-bottom:28px;
+}
+
+.brand-logo-only{
+  width:170px;
+  height:auto;
+  object-fit:contain;
+  display:block;
+  margin:0 auto;
+}
+
