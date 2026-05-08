@@ -9,3 +9,17 @@
   padding:4px;
 }
 
+
+
+.brand{
+  align-items:flex-start;
+}
+
+.brand-logo{
+  width:120px !important;
+  height:auto !important;
+  background:transparent !important;
+  padding:0 !important;
+  border-radius:0 !important;
+}
+
