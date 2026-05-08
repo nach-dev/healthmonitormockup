@@ -39,3 +39,25 @@
   margin:0 auto;
 }
 
+
+
+.brand{
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+  margin-bottom:24px !important;
+}
+
+.brand h1,
+.brand p{
+  display:none !important;
+}
+
+.brand-logo-only{
+  width:180px !important;
+  height:auto !important;
+  object-fit:contain !important;
+  display:block !important;
+  margin:0 auto !important;
+}
+
