@@ -28,7 +28,6 @@ if (entered !== password) {
   `;
   throw new Error("Unauthorized");
 }
-
 let trendChart,statusChart,bpChart,vitalDetailChart;let activeVitalTab="bp";
 const statusClass=s=>!s?"status-unknown":"status-"+String(s).toLowerCase().replace(/\s+/g,"-");
 const statusColor=s=>s==="High"?"#e84c4f":s==="Low"||s==="Overweight"?"#f4a340":s==="Normal"?"#16a06b":"#87928f";
