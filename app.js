@@ -1,3 +1,34 @@
+const password = "Chronic2026";
+
+let entered = prompt("Chronic Tracker Access Code");
+
+if (entered !== password) {
+  document.body.innerHTML = `
+  <div style="
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background:#f4f7f6;
+    font-family:Inter, Arial;
+  ">
+    <div style="
+      background:white;
+      padding:40px;
+      border-radius:20px;
+      text-align:center;
+      box-shadow:0 10px 30px rgba(0,0,0,.1);
+      width:320px;
+    ">
+      <img src="logo.png" style="width:140px;margin-bottom:20px;">
+      <h2>Protected Dashboard</h2>
+      <p>This dashboard requires authorized access.</p>
+    </div>
+  </div>
+  `;
+  throw new Error("Unauthorized");
+}
+
 let trendChart,statusChart,bpChart,vitalDetailChart;let activeVitalTab="bp";
 const statusClass=s=>!s?"status-unknown":"status-"+String(s).toLowerCase().replace(/\s+/g,"-");
 const statusColor=s=>s==="High"?"#e84c4f":s==="Low"||s==="Overweight"?"#f4a340":s==="Normal"?"#16a06b":"#87928f";
